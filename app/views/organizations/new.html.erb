@@ -1,0 +1,26 @@
+<h1>Create Organization</h1>
+<%= form_for @organization do |f| %>
+<div>
+	<%= f.text_field :name, :class=> "form-control", placeholder: "Name" %>
+</div>
+	<hr>
+<div>
+	<%= f.text_field :phone, :class=> "form-control", placeholder: "Phone" %>
+</div>
+	<hr>
+<div>
+	<%= f.text_field :email, :class=> "form-control", placeholder: "Email" %>
+</div>
+	<hr>
+<div>
+	<%= f.text_field :website, :class=> "form-control", placeholder: "Website" %>
+</div>
+	<hr>
+<div>
+	<%= f.text_field :logo, :class=> "form-control", placeholder: "Logo Url" %>
+</div>
+	<hr>
+<div>
+	<%= f.submit 'Create', :class => "btn btn-primary btn-block" %>
+</div>
+<% end %>

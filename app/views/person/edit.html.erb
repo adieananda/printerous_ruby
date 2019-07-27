@@ -1,0 +1,26 @@
+<h1>Edit  Persons</h1>
+<%= form_for @user , url: person_index_path, method: :put do |form|%>	
+	<%# <%= render partial: '/users/form', object: form %> 
+	<%= hidden_field(:user, :organization_id,:value => params[:organization_id]) %>
+<div>
+	<%= form.email_field :email, :class=> "form-control", placeholder: "Email" %>
+</div>
+<hr>
+<div>
+	<%= form.password_field :password, :class=> "form-control", placeholder: "Password" %>
+</div>
+<hr>
+<div>
+	<%= form.text_field :name, :class=> "form-control", placeholder: "Name" %>
+</div>
+<hr>
+<div>
+	<%= form.text_field :avatar, :class=> "form-control", placeholder: "Avatar" %>
+</div>
+<hr>
+<div>
+	<%= form.text_field :phone, :class=> "form-control", placeholder: "Phone" %>
+</div>
+<hr>
+    <%= form.submit 'Create', :class=>"btn btn-block btn-primary" %>
+<% end %>
